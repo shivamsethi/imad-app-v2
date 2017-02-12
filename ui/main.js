@@ -25,10 +25,10 @@ var submit_btn=document.getElementById("submit_btn");
 var name_input=document.getElementById("name_input");
 submit_btn.onclick=function(){
     
-    var request=new XMLHttpResponse();
+    var request=new XMLHttpRequest();
     
     request.onreadystatechange=function(){
-        if(request.readyState===XMLHttpResponse.DONE)
+        if(request.readyState===XMLHttpRequest.DONE)
         {
             if(request.status===200)
             {
