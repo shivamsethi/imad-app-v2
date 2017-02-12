@@ -4,7 +4,12 @@ var element=document.getElementById("main_element");
 element.innerHTML="New value of js code";
 
 var image=document.getElementById("image_id");
+var margin_left=0;
+function moveRight(){
+    margin_left=margin_left+10;
+    image.style.marginLeft=margin_left+'px';
+}
+
 image.onclick=function () {
-    image.style.marginLeft='200px';
-    image.style.marginTop='100px';
+    var interval=setInterval(moveRight,100);
 };
