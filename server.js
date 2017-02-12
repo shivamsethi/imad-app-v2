@@ -136,7 +136,7 @@ app.get('/ui/madi.png', function (req, res) {
 
 app.get('/:article_name',function(req,res){
     var selected=req.params.article_name;
-    res.send(createTemplate(article[selected]));
+    res.send(createTemplate(articles[selected]));
 });
 
 var port = 8080; // Use 8080 for local development because you might already have apache running on 80
