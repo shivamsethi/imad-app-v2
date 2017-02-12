@@ -34,7 +34,7 @@ function createTemplate(data)
     var html_template=`<html>
     
     <head>
-        <title>$title</title>
+        <title>${title}</title>
         
         <meta
             name="viewport"
@@ -58,15 +58,15 @@ function createTemplate(data)
                 </a>
             </div>
             <hr/>
-            <h4>$heading</h4>
+            <h4>${heading}</h4>
             <div>
             
-                $date
+                ${date}
             
             </div>
             <div>
                 
-                $content
+                ${content}
             
             </div>
             
