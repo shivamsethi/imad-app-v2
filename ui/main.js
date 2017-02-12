@@ -5,5 +5,6 @@ element.innerHTML="New value of js code";
 
 var image=document.getElementById("image_id");
 image.onclick=function () {
-    image.style.marginLeft='100px';
+    image.style.marginLeft='200px';
+    image.style.marginright='100px';
 };
