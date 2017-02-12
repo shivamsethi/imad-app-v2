@@ -24,12 +24,26 @@ counter_button.onclick=function(){
 var submit_btn=document.getElementById("submit_btn");
 var name_input=document.getElementById("name_input");
 submit_btn.onclick=function(){
-    var names=['Vijay','Ajay','Suresh','Ramesh'];
-    var list='';
-    for(var i=0;i<names.length;i++){
-        list+='<li>'+names[i]+'</li>';
-    }
-    var ul=document.getElementById("name_list");
-    ul.innerHTML=list;
+    
+    var request=new XMLHttpResponse();
+    
+    request.onreadystatechange=function(){
+        if(request.readyState===XMLHttpResponse.DONE)
+        {
+            if(request.status===200)
+            {
+                var names=request.responseText.toString();
+                var list='';
+                for(var i=0;i<names.length;i++){
+                    list+='<li>'+names[i]+'</li>';
+                }
+                var ul=document.getElementById("name_list");
+                ul.innerHTML=list;
+            }
+        }
+    };
+    
+    request.open('GET','http://shivamsethi.imad.hasura-app.io/submit-name?name='+name_input.value,true);
+    request.send(null);
     
 };
