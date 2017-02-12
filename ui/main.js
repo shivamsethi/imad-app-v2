@@ -39,6 +39,7 @@ submit_btn.onclick=function(){
                 }
                 var ul=document.getElementById("name_list");
                 ul.innerHTML=list;
+                name_input.innerHTML="";
             }
         }
     };
