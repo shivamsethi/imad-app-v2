@@ -20,3 +20,16 @@ counter_button.onclick=function(){
     request.open('GET','http://shivamsethi.imad.hasura-app.io/counter',true);
     request.send(null);
 };
+
+var submit_btn=document.getElementById("submit_btn");
+var name_input=document.getElementById("name_input");
+submit_btn.onclick=function(){
+    var names=['name1','name2','name3'];
+    var list='';
+    for(var i=0;i<names.length;i++){
+        list+='<ul>'+names[i]+'</ul>';
+    }
+    var ul=document.getElementById("nmame_list");
+    ul.innerHTML=ul;
+    
+};
