@@ -76,7 +76,6 @@ function createTemplate(data)
     
 </html>`;
 return html_template;
-    
 }
 
 
