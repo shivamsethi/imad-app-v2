@@ -30,6 +30,6 @@ submit_btn.onclick=function(){
         list+='<li>'+names[i]+'</li>';
     }
     var ul=document.getElementById("name_list");
-    ul.innerHTML=ul;
+    ul.innerHTML=list;
     
 };
