@@ -32,7 +32,7 @@ submit_btn.onclick=function(){
         {
             if(request.status===200)
             {
-                var names=request.responseText.toString();
+                var names=JSON.parse(request.responseText);
                 var list='';
                 for(var i=0;i<names.length;i++){
                     list+='<li>'+names[i]+'</li>';
