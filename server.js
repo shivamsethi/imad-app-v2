@@ -121,6 +121,11 @@ return html_template;
 }
 
 
+var count=0;
+app.get('/counter',function(req,res){
+    count=count+1;
+    res.send(count.tostring());
+});
 
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
