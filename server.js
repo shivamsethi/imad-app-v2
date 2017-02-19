@@ -92,9 +92,6 @@ function createTemplate(data)
     
     <body>
         
-        <script type="text/javascript" src="/ui/main.js">
-        </script>
-        
         <div
             class="container">
             
@@ -139,6 +136,9 @@ function createTemplate(data)
         
             </div>
         </div>
+        
+        <script type="text/javascript" src="/ui/main.js">
+        </script>
         
     </body>
     
