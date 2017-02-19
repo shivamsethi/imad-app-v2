@@ -151,13 +151,6 @@ app.get('/counter',function(req,res){
     res.send(count.toString());
 });
 
-
-app.get('/:article_name',function(req,res){
-    var selected=req.params.article_name;
-    res.send(createTemplate(articles[selected]));
-});
-
-
 var comments=[];
 app.get('/submit_comment/:comment',function(req,res){
     var comment=req.params.comment;
@@ -165,6 +158,10 @@ app.get('/submit_comment/:comment',function(req,res){
     res.send(JSON.stringify(comments));
 });
 
+app.get('/:article_name',function(req,res){
+    var selected=req.params.article_name;
+    res.send(createTemplate(articles[selected]));
+});
 
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
