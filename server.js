@@ -113,6 +113,26 @@ function createTemplate(data)
             </div>
             
         </div>
+        <br />
+        <hr />
+        <div>
+        
+            <input
+                type="text"
+                name="comment_text"
+                placeholder="Type Comment here..." />
+                
+            <input
+                type="submit"
+                name="submit_comment"
+                value="Comment" />
+                
+            <ul
+                name="comment_list">
+            
+            </ul>
+        
+        </div>
         
     </body>
     
