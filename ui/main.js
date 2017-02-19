@@ -22,6 +22,8 @@ counter_button.onclick=function(){
     request.send(null);
 };
 
+alert("etthe");
+
 var submit_btn=document.getElementById("submit_btn");
 var name_input=document.getElementById("name_input");
 submit_btn.onclick=function(){
