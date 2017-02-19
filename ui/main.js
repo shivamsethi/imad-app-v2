@@ -2,7 +2,7 @@ alert("start");
 //counter button
 var counter_button=document.getElementById("counter");
 var count_text=document.getElementById("count");
-
+alert("yaha par");
 
 counter_button.onclick=function(){
     
@@ -21,8 +21,7 @@ counter_button.onclick=function(){
     request.open('GET','http://shivamsethi.imad.hasura-app.io/counter',true);
     request.send(null);
 };
-
-alert("etthe");
+alert("yo");
 
 var submit_btn=document.getElementById("submit_btn");
 var name_input=document.getElementById("name_input");
