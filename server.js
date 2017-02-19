@@ -86,8 +86,7 @@ function createTemplate(data)
             href="/ui/style.css"
             rel="stylesheet" />
             
-        <script
-            src="/ui/main.js" />
+        
         
     </head>
     
