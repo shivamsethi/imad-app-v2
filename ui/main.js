@@ -1,3 +1,4 @@
+alert("start");
 //counter button
 var counter_button=document.getElementById("counter");
 var count_text=document.getElementById("count");
