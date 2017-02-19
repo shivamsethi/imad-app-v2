@@ -28,7 +28,7 @@ comment_btn.onclick=function(){
 };
 
 
-
+alert("eeeee");
 
 //counter button
 var counter_button=document.getElementById("counter");
