@@ -86,7 +86,9 @@ function createTemplate(data)
             href="/ui/style.css"
             rel="stylesheet" />
             
-        
+        <script
+            src="/ui/main.js"
+            type="text/javascript">/script>
         
     </head>
     
@@ -150,12 +152,12 @@ app.get('/counter',function(req,res){
     res.send(count.toString());
 });
 
-//var comments=[];
-//app.get('/submit_comment/:comment',function(req,res){
-  //  var comment=req.params.comment;
-    //comments.push(comment);
-    //res.send(JSON.stringify(comments));
-//});
+var comments=[];
+app.get('/submit_comment/:comment',function(req,res){
+    var comment=req.params.comment;
+    comments.push(comment);
+    res.send(JSON.stringify(comments));
+});
 
 app.get('/:article_name',function(req,res){
     var selected=req.params.article_name;
