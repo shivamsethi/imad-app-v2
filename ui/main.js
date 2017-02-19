@@ -1,31 +1,31 @@
 alert("start");
 
-var comment_btn=document.getElementById("comment_btn");
-var comment_input=document.getElementById("comment_text");
-comment_btn.onclick=function(){
-    alert("yaa");
-    var request=new XMLHttpRequest();
+// var comment_btn=document.getElementById("comment_btn");
+// var comment_input=document.getElementById("comment_text");
+// comment_btn.onclick=function(){
+//     alert("yaa");
+//     var request=new XMLHttpRequest();
     
-    request.onreadystatechange=function(){
-        if(request.readyState===XMLHttpRequest.DONE)
-        {
-            if(request.status===200)
-            {
-                var comments=JSON.parse(request.responseText);
-                var comment_list='';
-                for(var i=0;i<comments.length;i++)
-                {
-                    comment_list+="<li>"+comments[i]+"</li>";
-                }
-                var ul=document.getElementById("comment_list");
-                ul.innerHTML=comment_list;
-                comment_input.value="";
-            }
-        }
-    };
-    request.open('GET','http://shivamsethi.imad.hasura-app.io/submit_comment/'+comment_input.value,true);
-    request.send(null);
-};
+//     request.onreadystatechange=function(){
+//         if(request.readyState===XMLHttpRequest.DONE)
+//         {
+//             if(request.status===200)
+//             {
+//                 var comments=JSON.parse(request.responseText);
+//                 var comment_list='';
+//                 for(var i=0;i<comments.length;i++)
+//                 {
+//                     comment_list+="<li>"+comments[i]+"</li>";
+//                 }
+//                 var ul=document.getElementById("comment_list");
+//                 ul.innerHTML=comment_list;
+//                 comment_input.value="";
+//             }
+//         }
+//     };
+//     request.open('GET','http://shivamsethi.imad.hasura-app.io/submit_comment/'+comment_input.value,true);
+//     request.send(null);
+// };
 
 
 alert("eeeee");
