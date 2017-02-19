@@ -85,6 +85,9 @@ function createTemplate(data)
         <link
             href="/ui/style.css"
             rel="stylesheet" />
+            
+        <script
+            src="/ui/main.js" />
         
     </head>
     
@@ -111,27 +114,28 @@ function createTemplate(data)
                 ${content}
             
             </div>
-            
-        </div>
-        <br />
-        <hr />
-        <div>
         
-            <input
-                type="text"
-                name="comment_text"
-                placeholder="Type Comment here..." />
-                
-            <input
-                type="submit"
-                name="submit_comment"
-                value="Comment" />
-                
-            <ul
-                name="comment_list">
+            <br />
+            <hr />
             
-            </ul>
+            <div>
         
+                <input
+                    type="text"
+                    name="comment_text"
+                    placeholder="Type Comment here..." />
+                
+                <input
+                    type="submit"
+                    name="comment_btn"
+                    value="Comment" />
+                
+                <ul
+                    name="comment_list">
+            
+                </ul>
+        
+            </div>
         </div>
         
     </body>
@@ -145,6 +149,12 @@ var count=0;
 app.get('/counter',function(req,res){
     count=count+1;
     res.send(count.toString());
+});
+var comments=[];
+app.get('/submit_comment/:comment',function(req,res){
+    var comment=req.params.comment;
+    comments.push(comment);
+    res.send(JSON.stringify(comments));
 });
 
 app.get('/', function (req, res) {
