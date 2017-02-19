@@ -87,7 +87,6 @@ function createTemplate(data)
             rel="stylesheet" />
             
         
-        
     </head>
     
     <body>
@@ -184,6 +183,34 @@ app.get('/submit-name',function(req,res){
     names.push(name);
     res.send(JSON.stringify(names));
 });
+
+
+var comment_btn=document.getElementById("comment_btn");
+var comment_input=document.getElementById("comment_text");
+comment_btn.onclick=function(){
+    var request=new XMLHttpRequest();
+    
+    request.onreadystatechange=function(){
+        if(request.readyState===XMLHttpRequest.DONE)
+        {
+            if(request.status===200)
+            {
+                var comments=JSON.parse(request.responseText);
+                var comment_list='';
+                for(var i=0;i<comments.length;i++)
+                {
+                    comment_list+="<li>"+comments[i]+"</li>";
+                }
+                var ul=document.getElementById("comment_list");
+                ul.innerHTML=comment_list;
+                comment_input.value="";
+            }
+        }
+    };
+    request.open('GET','http://shivamsethi.imad.hasura-app.io/submit_comment/'+comment_input.value,true);
+    request.send(null);
+};
+
 
 
 var port = 8080; // Use 8080 for local development because you might already have apache running on 80
