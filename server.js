@@ -124,12 +124,12 @@ function createTemplate(data)
         
                 <input
                     type="text"
-                    name="comment_text"
+                    id="comment_text"
                     placeholder="Type Comment here..." />
                 
                 <input
                     type="submit"
-                    name="comment_btn"
+                    id="comment_btn"
                     value="Comment" />
                 
                 <ul
