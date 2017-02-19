@@ -133,7 +133,7 @@ function createTemplate(data)
                     value="Comment" />
                 
                 <ul
-                    name="comment_list">
+                    id="comment_list">
             
                 </ul>
         
