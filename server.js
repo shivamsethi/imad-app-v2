@@ -161,7 +161,12 @@ app.get('/submit_comment/:comment',function(req,res){
 });
 
 app.get('/shiv.html', function (req, res) {
-  res.send('abhi');
+  var temp=[];
+  temp.push('abhi');
+  temp.push('shiv');
+  res.send(JSON.stringify(temp));
+  
+  
   //res.sendFile(path.join(__dirname, 'ui', 'madi.png'));
 });
 
