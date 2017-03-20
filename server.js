@@ -160,13 +160,13 @@ app.get('/submit_comment/:comment',function(req,res){
     res.send(JSON.stringify(comments));
 });
 
+app.get('/shiv', function (req, res) {
+  res.sendFile(path.join(__dirname, 'ui', 'index.html'));
+});
+
 app.get('/:article_name',function(req,res){
     var selected=req.params.article_name;
     res.send(createTemplate(articles[selected]));
-});
-
-app.get('/shiv', function (req, res) {
-  res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
 
 app.get('/ui/style.css', function (req, res) {
