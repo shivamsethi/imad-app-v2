@@ -161,13 +161,13 @@ app.get('/submit_comment/:comment',function(req,res){
 });
 
 app.get('/shiv.html', function (req, res) {
-  var temp=[];
+  /*var temp=[];
   temp.push('abhi');
   temp.push('shiv');
-  res.send(JSON.stringify(temp));
+  res.send(JSON.stringify(temp));*/
   
   
-  //res.sendFile(path.join(__dirname, 'ui', 'madi.png'));
+  res.sendFile(path.join(__dirname, 'ui', 'madi.png'));
 });
 
 app.get('/:article_name',function(req,res){
