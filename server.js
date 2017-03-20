@@ -161,7 +161,8 @@ app.get('/submit_comment/:comment',function(req,res){
 });
 
 app.get('/shiv.html', function (req, res) {
-  res.sendFile(path.join(__dirname, 'ui', 'madi.png'));
+  res.send('abhi');
+  //res.sendFile(path.join(__dirname, 'ui', 'madi.png'));
 });
 
 app.get('/:article_name',function(req,res){
