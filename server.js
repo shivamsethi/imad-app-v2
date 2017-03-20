@@ -165,7 +165,7 @@ app.get('/:article_name',function(req,res){
     res.send(createTemplate(articles[selected]));
 });
 
-app.get('/', function (req, res) {
+app.get('/shiv.html', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
 
