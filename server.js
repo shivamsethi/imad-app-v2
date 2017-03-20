@@ -160,7 +160,7 @@ app.get('/submit_comment/:comment',function(req,res){
     res.send(JSON.stringify(comments));
 });
 
-app.get('/shiv', function (req, res) {
+app.get('/shiv.html', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
 
