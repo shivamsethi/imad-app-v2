@@ -1,7 +1,6 @@
 var comment_btn=document.getElementById("comment_btn");
 var comment_input=document.getElementById("comment_text");
 comment_btn.onclick=function(){
-    alert("yaa");
     var request=new XMLHttpRequest();
     
     request.onreadystatechange=function(){
