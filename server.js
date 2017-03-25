@@ -182,10 +182,25 @@ app.get('/submit_comment/:comment',function(req,res){
 });
 
 
-app.get('/:article_name',function(req,res){
-    var selected=req.params.article_name;
-    res.send(createTemplate(articles[selected]));
+app.get('/articles/:article_name',function(req,res){
+    pool.query("SELECT * FROM article WHERE title="+req.params.article_name,function(error,result){
+        if(error)
+        {
+            res.status(500).send(error.toString());
+        }else
+        {
+            if(result.rows.length===0)
+            {
+                res.status(404).send('Article not found.');
+            }else
+            {
+                var article_data=result.rows[0];
+                res.send(createTemplate(article_data));
+            }
+        }
+    });
 });
+
 
 app.get('/ui/style.css', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'style.css'));
