@@ -183,7 +183,7 @@ app.get('/submit_comment/:comment',function(req,res){
 
 
 app.get('/articles/:article_name',function(req,res){
-    pool.query("SELECT * FROM article WHERE title="+req.params.article_name,function(error,result){
+    pool.query("SELECT * FROM article WHERE title='"+req.params.article_name+"'",function(error,result){
         if(error)
         {
             res.status(500).send(error.toString());
